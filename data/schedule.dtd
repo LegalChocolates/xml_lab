@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Root Element -->
+<!ELEMENT schedule (days)+ >
+<!ATTLIST schedule
+    set  (#PCDATA) #REQUIRED
+    term (#PCDATA) #REQUIRED
+>
+
+<!-- Days of the Week -->
+<!ELEMENT  days (periods)* >
+<!ATTLIST days
+    type (mon|tue|wed|thu|fri|sat|sun) #REQUIRED
+>
+
+<!-- A Time-slot in a Day ( e.g. 10:30 ) -->
+<!ELEMENT periods (courses)* >
+<!ATTLIST periods
+    time (830|930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
+
+<!ELEMENT courses (course)* >
+
+<!ELEMENT  course () >
