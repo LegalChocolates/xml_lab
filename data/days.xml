@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE days SYSTEM "schedule.dtd">
+<days>
+    <day type="mon">
+        <booking instructor="Catherine Ryan" room="SW3 4785" bookingtype="Lab" timeslot="930"  coursename="BLAW 3600"/>
+        <booking instructor="Mirela Gutica"  room="SW1 1205" bookingtype="Lec" timeslot="1130" coursename="COMP 4735"/>
+        <booking instructor="Mirela Gutica"  room="SE12 320" bookingtype="Lab" timeslot="1230" coursename="COMP 4735"/>
+    </day>
+    <day type="tue">
+        <booking instructor="D`arcy Smith" room="SE12 325" bookingtype="Lab" timeslot="830"  coursename="COMP 4977"/>
+        <booking instructor="Brenda Fine"  room="SW5 1850" bookingtype="Lec" timeslot="1130" coursename="COMP 4560"/>
+        <booking instructor="James Parry"  room="SW5 1840" bookingtype="Lec" timeslot="1430" coursename="COMP 4711"/>
+        <booking instructor="Joseph Lo"    room="SE12 322" bookingtype="Lab" timeslot="1530" coursename="COMP 4560"/>
+    </day>
+    <day type="thu">
+        <booking instructor="Medhat Elmasry" room="SE12 308" bookingtype="Sem" timeslot="830"  coursename="COMP 4976"/>
+        <booking instructor="Mirela Gutica"  room="SW3 1750" bookingtype="Lec" timeslot="1130" coursename="COMP 4735"/>
+        <booking instructor="Medhat Elmasry" room="SE12 308" bookingtype="Sem" timeslot="1230" coursename="COMP 4976"/>
+    </day>
+</days>
