@@ -1,7 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends MY_Controller {
+
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('timetable');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +26,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+//		$this->load->view('welcome_message');
+
+//		$this->load->helper('directory');
+//		$candidates = directory_map(DATAPATH);
+//		sort($candidates);
+
+		$this->data['days'] = array('days');
+
+		$this->data['pagebody'] = 'schedule';
+
+		$this->render();
+
 	}
 }
