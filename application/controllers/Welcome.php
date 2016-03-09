@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends MY_Controller {
+class Welcome extends CI_Controller {
 
 	function __construct()
 	{
@@ -32,11 +32,15 @@ class Welcome extends MY_Controller {
 //		$candidates = directory_map(DATAPATH);
 //		sort($candidates);
 
-		$this->data['days'] = array('days');
+		$x = $this->timetable->days();
 
+		$this->data['days'] = "testing";
+
+		var_dump($x);
+		
 		$this->data['pagebody'] = 'schedule';
 
-		$this->render();
+//		$this->render();
 
 	}
 }
