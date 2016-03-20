@@ -1,1 +1,1 @@
-{days}
+This is scheudle page
