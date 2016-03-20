@@ -14,7 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		{days}
-            {instructor}
+			{day}
+			{course}
 		{/days}
 	</div>
 

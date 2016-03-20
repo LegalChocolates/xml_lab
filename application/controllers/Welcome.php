@@ -35,22 +35,40 @@ class Welcome extends MY_Controller {
         $this->load->library('parser');
 
 		$timetable = $this->timetable->days();
-		var_dump($timetable["mon"][0]->getCoursename());
+//		var_dump($timetable["mon"][0]->getCoursename());
 		//die();
-        $y = array();
 
-        $x = get_object_vars($timetable["mon"][0]);
+		$keys = array_keys($timetable);
+		$y = array();
 
+		foreach($keys as $key)
+		{
+			$tmp = array("day" => $key, "course" => $timetable[$key][0]->getCoursename());
+			$y[$key] = $tmp;
+		}
 
-        foreach ($x as $prop) {
-            $z = array('instructor' => $prop);
-            array_push($y, $z);
-        }
+		/*
 
+		y == data
 
-        $this->data['days'] = $this->parser->parse('welcome_message', array('days' => $y), true);
+		in data
 
-		$this->data['pagebody'] = 'schedule';
+		$key =>
+
+		 */
+//		var_dump($y);
+
+//        $x = get_object_vars($timetable["mon"][0]);
+//
+//
+//        foreach ($x as $prop) {
+//            $z = array('instructor' => $prop);
+//            array_push($y, $z);
+//        }
+		$this->data['pagebody'] = 'welcome_message';
+
+        $this->data['days'] =$y ;
+
 
 
 		$this->render();
