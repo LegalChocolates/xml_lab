@@ -35,7 +35,8 @@ class Welcome extends MY_Controller {
         $this->load->library('parser');
 
 		$timetable = $this->timetable->days();
-
+		var_dump($timetable["mon"][0]->getCoursename());
+		//die();
         $y = array();
 
         $x = get_object_vars($timetable["mon"][0]);

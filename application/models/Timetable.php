@@ -35,14 +35,14 @@ class Timetable extends CI_Model
 
             foreach ($day->booking as $booking)
             {
-                $r = new stdClass();
-                $r->instructor  = (string) $booking['instructor'];
-                $r->room        = (string) $booking['room'];
-                $r->bookingtype = (string) $booking['bookingtype'];
-                $r->timeslot    = (string) $booking['timeslot'];
-                $r->coursename  = (string) $booking['coursename'];
+                $b = new Booking();
+                $b->setInstructor((string) $booking['instructor']);
+                $b->setRoom((string) $booking['room']);
+                $b->setBookingtype((string) $booking['bookingtype']);
+                $b->setTimeslot((string) $booking['timeslot']);
+                $b->setCoursename((string) $booking['coursename']);
 
-                array_push($bookings, $r);
+                array_push($bookings, $b);
             }
 
             $this->days[$type] = $bookings;
