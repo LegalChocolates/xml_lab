@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE courses SYSTEM "schedule.dtd">
 <courses>
+
     <!-- Monday -->
     <course code="BLAW 3600">
-        <booking instructor="Catherine Ryan" room="SW3 4785" bookingtype="Lab"/>
+        <booking instructor="Catherine Ryan" room="SW9 122"  bookingtype="Lab"/>
     </course>
     <course code="COMP 4735">
-        <booking instructor="Mirela Gutica"  room="SW1 1205" bookingtype="Lec"/>
+        <booking instructor="Mirela Gutica"  room="SW5 1840" bookingtype="Lec"/>
     </course>
     <course code="COMP 4735">
         <booking instructor="Mirela Gutica"  room="SE12 320" bookingtype="Lab"/>
@@ -14,21 +15,46 @@
 
     <!-- Tuesday -->
     <course code="COMP 4977">
-        <booking instructor="D`arcy Smith" room="SE12 325" bookingtype="Sem"/>
+        <booking instructor="D`arcy Smith"   room="SE12 325" bookingtype="Sem"/>
     </course>
     <course code="COMP 4560">
-        <booking instructor="Brenda Fine"  room="SW5 1850" bookingtype="Lec"/>
+        <booking instructor="Brenda Fine"    room="SW5 1850" bookingtype="Lec"/>
     </course>
     <course code="COMP 4711">
-        <booking instructor="James Parry"  room="SW5 1850" bookingtype="Lec"/>
+        <booking instructor="James Parry"    room="SW5 1840" bookingtype="Lec"/>
     </course>
     <course code="COMP 4560">
-        <booking instructor="Joseph Lo"    room="SE12 322" bookingtype="Lab"/>
+        <booking instructor="Joseph Lo"      room="SE12 322" bookingtype="Lab"/>
+    </course>
+
+    <!-- Wednesday -->
+    <course code="COMP 4711">
+        <booking instructor="James Parry"    room="SE12 320" bookingtype="Lab"/>
+    </course>
+    <course code="COMP 4735">
+        <booking instructor="Mirela Gutica"  room="SW1 1205" bookingtype="Lec"/>
     </course>
 
     <!-- Thursday -->
     <course code="COMP 4976">
         <booking instructor="Medhat Elmasry" room="SE12 308" bookingtype="Sem"/>
     </course>
-    
+    <course code="COMP 4735">
+        <booking instructor="Mirela Gutica"  room="SW3 1710" bookingtype="Lec"/>
+    </course>
+
+    <!-- Friday -->
+    <course code="BLAW 3600">
+        <booking instructor="Catherine Ryan" room="SW9 122"  bookingtype="Lec"/>
+    </course>
+    <course code="COMP 4976">
+        <booking instructor="Medhat Elmasry" room="SE12 308" bookingtype="Sem"/>
+    </course>
+    <course code="COMP 4560">
+        <booking instructor="Brenda Fine"    room="SW1 1021" bookingtype="Lec"/>
+    </course>
+    <course code="COMP 4977">
+        <booking instructor="D`arcy Smith"   room="SE12 325" bookingtype="Sem"/>
+    </course>
+
 </courses>
