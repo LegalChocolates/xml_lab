@@ -24,7 +24,7 @@
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type = 'text/javascript' src = "<?php echo base_url();?>js/script.js"></script>
+    <script type = 'text/javascript' src = "/js/script.js"></script>
 </head>
 <body class="container">
 
@@ -37,7 +37,7 @@
             <h3>Days</h3>
             <nav class="well" style="text-align: left">
                 <label for="days-day">Day</label>
-                <select id="days-day"><option>{days_days}</option></select>
+                <select id="days-day"><option>{days_days}</option><option>other</option></select>
                 <br>
                 <label for="days-time">Time</label>
                 <select id="days-time"><option>{days_times}</option></select>
@@ -70,13 +70,13 @@
     </aside>
     <div class="row">
         <div class="col-md-4 h">
-            <iframe src="http://www.w3schools.com"></iframe>
+            <iframe id="days-frame" src="http://www.w3schools.com"></iframe>
         </div>
         <div class="col-md-4 h">
-            <iframe src="http://www.w3schools.com"></iframe>
+            <iframe id="courses-frame" src="http://www.w3schools.com"></iframe>
         </div>
         <div class="col-md-4 h">
-            <iframe src="http://www.w3schools.com"></iframe>
+            <iframe id="periods-frame" src="http://www.w3schools.com"></iframe>
         </div>
     </div>
 </body>
