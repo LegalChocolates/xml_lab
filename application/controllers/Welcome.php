@@ -24,7 +24,7 @@ class Welcome extends MY_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function getAll()
 	{
         $this->load->library('parser');
 		$days    = $this->timetable->days();
@@ -112,7 +112,7 @@ class Welcome extends MY_Controller {
 
 	}
 
-	public function mockup(){
+	public function index(){
 		$this->load->helper('url');
 		$this->load->helper('form');
 
