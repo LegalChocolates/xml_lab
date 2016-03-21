@@ -306,10 +306,6 @@ class Welcome extends MY_Controller {
 			$this->data['bookingtype'] = $search_course->getBookingtype();
 			$this->data['coursename']  = $search_day->getCoursename();
 		}
-
-
-
-
 		$this->render();
 
 	}
