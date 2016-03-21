@@ -8,6 +8,8 @@ $(document).ready( function(){
     load_courses();
     load_periods();
 
+    bingo_bool = false;
+
     $("#days-day, #days-time").on('change', function(){
         load_days();
     });
@@ -31,7 +33,22 @@ $(document).ready( function(){
     $("#periods-btn").click(function(){
         setPeriods();
     });
+
+    $(".btn-danger").click(function(){
+        var result = $("#result");
+        if (bingo_bool)
+        {
+            result.removeClass('result-red').addClass('result-green');
+        }
+        else
+        {
+            result.removeClass('result-green').addClass('result-red');
+        }
+        bingo_bool = !bingo_bool;
+    });
 });
+
+var bingo_bool;
 
 var day_day,day_time,period_day,period_time,course_code,course_type;
 

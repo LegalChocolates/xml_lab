@@ -26,6 +26,20 @@
             top: 1em;
             right: 2em;
         }
+
+        .left-text {
+            position: absolute;
+            top: 1em;
+            left: 2em;
+        }
+
+        .result-green {
+            color: darkseagreen;
+        }
+
+        .result-red {
+            color: firebrick;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -41,6 +55,9 @@
             <label for="bingo-time">Time</label>
             {bingo_times}
             <button class="btn btn-lg btn-danger">Attempt Bingo!</button>
+        </div>
+        <div class="left-text">
+            <h3 id="result">Bingo!!!</h3>
         </div>
     </header>
 
