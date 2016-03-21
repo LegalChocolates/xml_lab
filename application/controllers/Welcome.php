@@ -163,6 +163,9 @@ class Welcome extends MY_Controller {
 		$periods_day_id = 'id="periods-day"';
 		$periods_time_id = 'id="periods-time"';
 
+		$bing_days__id = 'id="bingo-day"';
+		$bing_times__id = 'id="bingo-time"';
+
 		$this->data['pagebody'] = 'mockup';
 
 		//name data selected additional
@@ -175,6 +178,9 @@ class Welcome extends MY_Controller {
 
 		$this->data['periods_days']  = form_dropdown('pdays', $day_enum, 'mon', $periods_day_id);
 		$this->data['periods_times'] = form_dropdown('ptimes', $time_enum, '830', $periods_time_id);
+
+		$this->data['bingo_days'] = form_dropdown('bdays', $day_enum, 'mon', $bing_days__id);
+		$this->data['bingo_times'] = form_dropdown('btimes', $time_enum, '830', $bing_times__id);
 
 		$this->render();
 	}
