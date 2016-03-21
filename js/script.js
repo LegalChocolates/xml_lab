@@ -37,8 +37,12 @@ $(document).ready( function(){
     $(".btn-danger").click(function(){
         bingo_day  = $("#bingo-day").find(":selected").val();
         bingo_time = $("#bingo-time").find(":selected").val();
-        window.location.assign(window.location.origin + "/welcome/search/" + bingo_day + "/" + bingo_time)
+        window.location.assign(window.location.origin + "/welcome/search/" + bingo_day + "/" + bingo_time);
     });
+    $("#viewall").click(function(){
+        window.location.assign(window.location.origin + "/welcome/getall");
+    });
+
 });
 
 var bingo_bool;
