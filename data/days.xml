@@ -2,7 +2,7 @@
 <!DOCTYPE days SYSTEM "schedule.dtd">
 <days>
     <day type="mon">
-        <booking instructor="Catherine Ryan" room="SW9 122"  bookingtype="Lab" timeslot="930"  coursename="BLAW 3600"/>
+        <!--<booking instructor="Catherine Ryan" room="SW9 122"  bookingtype="Lab" timeslot="930"  coursename="BLAW 3600"/>-->
         <booking instructor="Mirela Gutica"  room="SW5 1840" bookingtype="Lec" timeslot="1130" coursename="COMP 4735"/>
         <booking instructor="Mirela Gutica"  room="SE12 320" bookingtype="Lab" timeslot="1230" coursename="COMP 4735"/>
     </day>
@@ -13,7 +13,7 @@
         <booking instructor="Joseph Lo"      room="SE12 322" bookingtype="Lab" timeslot="1530" coursename="COMP 4560"/>
     </day>
     <day type="wed">
-        <booking instructor="James Parry"    room="SE12 320" bookingtype="Lab" timeslot="930"  coursename="COMP 4711"/>
+        <!--<booking instructor="James Parry"    room="SE12 320" bookingtype="Lab" timeslot="930"  coursename="COMP 4711"/>-->
         <booking instructor="Mirela Gutica"  room="SW1 1205" bookingtype="Lec" timeslot="1330" coursename="COMP 4735"/>
     </day>
     <day type="thu">

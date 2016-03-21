@@ -261,6 +261,56 @@ class Welcome extends MY_Controller {
 	}
 
 
+	public function search($day, $time){
+		$this->data['pagebody'] = 'search';
+		$search_course = $this->timetable->searchCourseBingo($day, $time);
+		$search_day = $this->timetable->searchDay($day, $time);
+		$search_period = $this->timetable->searchPeriod($time, $day);
+
+		$this->data['timeslot']    = "?";
+		$this->data['day']		   = "?";
+		$this->data['instructor']  = "?";
+		$this->data['room']        = "?";
+		$this->data['bookingtype'] = "?";
+		$this->data['coursename']  = "?";
+
+		if($search_course == null){
+			$this->data['course_message'] = "Course NOT found!";
+			$this->data['message'] = "NOT BINGO!";
+		} else
+			$this->data['course_message'] = "Course found!";
+
+		if($search_day == null){
+			$this->data['day_message'] = "Day NOT found!";
+			$this->data['message'] = "NOT BINGO!";
+		} else
+			$this->data['day_message'] = "Day found!";
+
+		if($search_period == null){
+			$this->data['period_message'] = "Period NOT found!";
+			$this->data['message'] = "NOT BINGO!";
+		} else
+			$this->data['period_message'] = "Period found!";
+
+
+		if($search_course != null && $search_day != null && $search_period != null){
+			$this->data['message'] = "BINGO";
+			$this->data['course_message'] = "Course found!";
+			$this->data['day_message'] = "Day found!";
+			$this->data['period_message'] = "Period found!";
+
+			$this->data['timeslot']    = $time;
+			$this->data['day']		   = $day;
+			$this->data['instructor']  = $search_course->getInstructor();
+			$this->data['room']        = $search_course->getRoom();
+			$this->data['bookingtype'] = $search_course->getBookingtype();
+			$this->data['coursename']  = $search_day->getCoursename();
+		}
+		$this->render();
+
+	}
+
+
 
 
 

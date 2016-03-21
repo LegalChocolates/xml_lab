@@ -57,7 +57,7 @@
             <button class="btn btn-lg btn-danger">Attempt Bingo!</button>
         </div>
         <div class="left-text">
-            <h3 id="result">Bingo!!!</h3>
+            <button id="viewall" class="btn btn-lg btn-default">View All</button>
         </div>
     </header>
 

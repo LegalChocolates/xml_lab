@@ -4,7 +4,7 @@
 
     <course code="BLAW 3600">
         <booking instructor="Catherine Ryan" room="SW5 1840" bookingtype="Lec" dayofweek="mon" timeslot="930"/>
-        <booking instructor="Catherine Ryan" room="SW9 122"  bookingtype="Lab" dayofweek="fri" timeslot="830"/>
+        <!--<booking instructor="Catherine Ryan" room="SW9 122"  bookingtype="Lab" dayofweek="fri" timeslot="830"/>-->
     </course>
     <course code="COMP 4735">
         <booking instructor="Mirela Gutica"  room="SW1 1205" bookingtype="Lec" dayofweek="wed" timeslot="1330"/>
@@ -20,7 +20,7 @@
     <course code="COMP 4560">
         <booking instructor="Brenda Fine"    room="SW5 1850" bookingtype="Lec" dayofweek="tue" timeslot="1130"/>
         <booking instructor="Brenda Fine"    room="SW1 1021" bookingtype="Lec" dayofweek="fri" timeslot="1230"/>
-        <booking instructor="Joseph Lo"      room="SE12 322" bookingtype="Lab" dayofweek="tue" timeslot="1530"/>
+        <!--<booking instructor="Joseph Lo"      room="SE12 322" bookingtype="Lab" dayofweek="tue" timeslot="1530"/>-->
     </course>
     <course code="COMP 4711">
         <booking instructor="James Parry"    room="SW5 1840" bookingtype="Lec" dayofweek="tue" timeslot="1430"/>

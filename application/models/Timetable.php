@@ -41,6 +41,7 @@ class Timetable extends CI_Model
                 $b->setBookingtype((string) $booking['bookingtype']);
                 $b->setTimeslot((string) $booking['timeslot']);
                 $b->setCoursename((string) $booking['coursename']);
+                $b->setDayofweek($type);
 
                 array_push($bookings, $b);
             }
@@ -61,6 +62,7 @@ class Timetable extends CI_Model
                 $b->setBookingtype((string) $booking['bookingtype']);
                 $b->setDayofweek((string) $booking['dayofweek']);
                 $b->setCoursename((string) $booking['coursename']);
+                $b->setTimeslot($type);
 
                 array_push($bookings, $b);
             }
@@ -151,6 +153,23 @@ class Timetable extends CI_Model
             }
         }
         return $foundcourses;
+    }
+
+    function searchCourseBingo($day, $timeslot){
+        $allcourses = array_keys($this->courses);
+
+
+        foreach($allcourses as $key)
+        {
+            for($i = 0; $i < sizeof($this->courses[$key]); $i++) {
+                if($this->courses[$key][$i]->getDayofweek() == $day &&
+                    $this->courses[$key][$i]->getTimeslot() == $timeslot)
+                    return $this->courses[$key][$i];
+            }
+
+        }
+
+        return null;
     }
 
 

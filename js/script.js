@@ -35,20 +35,18 @@ $(document).ready( function(){
     });
 
     $(".btn-danger").click(function(){
-        var result = $("#result");
-        if (bingo_bool)
-        {
-            result.removeClass('result-red').addClass('result-green');
-        }
-        else
-        {
-            result.removeClass('result-green').addClass('result-red');
-        }
-        bingo_bool = !bingo_bool;
+        bingo_day  = $("#bingo-day").find(":selected").val();
+        bingo_time = $("#bingo-time").find(":selected").val();
+        window.location.assign(window.location.origin + "/welcome/search/" + bingo_day + "/" + bingo_time);
     });
+    $("#viewall").click(function(){
+        window.location.assign(window.location.origin + "/welcome/getall");
+    });
+
 });
 
 var bingo_bool;
+var bingo_day, bingo_time;
 
 var day_day,day_time,period_day,period_time,course_code,course_type;
 
