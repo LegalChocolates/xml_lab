@@ -235,6 +235,11 @@ class Welcome extends MY_Controller {
 			$this->data['type'] = $course_type;
 			$this->data['instructor'] = $course->getInstructor();
 			$this->data['room'] = $course->getRoom();
+		} else {
+			$this->data['code'] = "";
+			$this->data['type'] = "";
+			$this->data['instructor'] = "";
+			$this->data['room'] = "";
 		}
 		$this->render();
 	}
