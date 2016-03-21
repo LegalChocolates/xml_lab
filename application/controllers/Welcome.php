@@ -102,12 +102,10 @@ class Welcome extends MY_Controller {
 		}
 
 
-
 		$this->data['pagebody'] = 'welcome_message';
 		$this->data['periods']  = $x;
-        $this->data['days']     = $y;
+		$this->data['days']     = $y;
 		$this->data['courses']  = $z;
-
 
 
 		$this->render();
@@ -116,7 +114,65 @@ class Welcome extends MY_Controller {
 
 	public function mockup(){
 		$this->load->helper('url');
-		$this->load->view('mockup');
-//		$this->render();
+		$this->load->helper('form');
+
+		$day_enum = array(
+			'mon' => 'mon',
+			'tue' => 'tue',
+			'wed' => 'wed',
+			'thu' => 'thu',
+			'fri' => 'fri'
+		);
+
+		$time_enum = array(
+			'830'  => '830',
+			'930'  => '930',
+			'1030' => '1030',
+			'1130' => '1130',
+			'1230' => '1230',
+			'1330' => '1330',
+			'1430' => '1430',
+			'1530' => '1530',
+			'1630' => '1630'
+		);
+
+		$type_enum = array(
+			'Lab' => 'Lab',
+			'Lec' => 'Lec',
+			'Sem' => 'Sem'
+		);
+
+		$code_enum = array(
+			'BLAW 3600' => 'BLAW 3600',
+			'COMP 4711' => 'COMP 4711',
+			'COMP 4976' => 'COMP 4976',
+			'COMP 4977' => 'COMP 4977',
+			'COMP 4560' => 'COMP 4560',
+			'COMP 4735' => 'COMP 4735',
+		);
+
+		$days_day_id  = 'id="days-day"';
+		$days_time_id = 'id="days-time"';
+
+		$courses_code = 'id="courses-code"';
+		$courses_type = 'id="courses-type"';
+
+		$periods_day_id = 'id="periods-day"';
+		$periods_time_id = 'id="periods-time"';
+
+		$this->data['pagebody'] = 'mockup';
+
+		//name data selected additional
+		
+		$this->data['days_days']  = form_dropdown('ddays', $day_enum, 'mon', $days_day_id);
+		$this->data['days_times'] = form_dropdown('dtimes', $time_enum, '830', $days_time_id);
+
+		$this->data['courses_types']  = form_dropdown('ctypes', $type_enum, 'Lab', $courses_type);
+		$this->data['courses_codes']  = form_dropdown('ccodes', $code_enum, 'BLAW 3600', $courses_code);
+
+		$this->data['periods_days']  = form_dropdown('pdays', $day_enum, 'mon', $periods_day_id);
+		$this->data['periods_times'] = form_dropdown('ptimes', $time_enum, '830', $periods_time_id);
+
+		$this->render();
 	}
 }

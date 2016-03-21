@@ -37,10 +37,10 @@
             <h3>Days</h3>
             <nav class="well" style="text-align: left">
                 <label for="days-day">Day</label>
-                <select id="days-day"><option>{days_days}</option><option>other</option></select>
+                {days_days}
                 <br>
                 <label for="days-time">Time</label>
-                <select id="days-time"><option>{days_times}</option></select>
+                {days_times}
                 <button type="button" class="btn btn-success pull-right">Search</button>
             </nav>
         </div>
@@ -48,10 +48,10 @@
             <h3>Courses</h3>
             <nav class="well" style="text-align: left">
                 <label for="courses-code">Course Code</label>
-                <select id="courses-code"><option>{courses_codes}</option></select>
+                {courses_codes}
                 <br>
                 <label for="courses-type">Type</label>
-                <select id="courses-type"><option>{courses_types}</option></select>
+                {courses_types}
                 <button type="button" class="btn btn-success pull-right">Search</button>
             </nav>
         </div>
@@ -59,10 +59,10 @@
             <h3>Periods</h3>
             <nav class="well" style="text-align: left">
                 <label for="periods-time">Timeslot</label>
-                <select id="periods-time"><option>{periods_times}</option></select>
+                {periods_times}
                 <br>
                 <label for="periods-day">Day</label>
-                <select id="periods-day"><option>{periods_days}</option></select>
+                {periods_days}
                 <button type="button" class="btn btn-success pull-right">Search</button>
             </nav>
 
