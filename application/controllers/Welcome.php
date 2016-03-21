@@ -178,8 +178,18 @@ class Welcome extends MY_Controller {
 
 	public function periods($timeslot, $day){
 		$this->data['pagebody'] = 'schedule';
-		$this->data['timeslot'] = $timeslot;
-		$this->data['day'] = $day;
+		$period = $this->timetable->searchPeriod($timeslot, $day);
+		if($period != null){
+			$this->data['message']     = "FOUND!";
+			$this->data['timeslot']    = $timeslot;
+			$this->data['day']		   = $day;
+			$this->data['instructor']  = $period->getInstructor();
+			$this->data['room']        = $period->getRoom();
+			$this->data['bookingtype'] = $period->getBookingtype();
+			$this->data['coursename']  = $period->getCoursename();
+		} else
+			$this->data['message'] 	   = "NOT FOUND!";
+
 		$this->render();
 	}
 }
