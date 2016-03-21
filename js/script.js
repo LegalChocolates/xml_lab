@@ -57,6 +57,12 @@ function setDays(){
 }
 
 function setCourses(){
+    var url = window.location.origin + window.location.pathname;
+    course_code = $("#courses-code").find(":selected").val();
+    course_type = $("#courses-type").find(":selected").val();
+    //origin   == xml-lab.dev
+    //pathname == /Welcome/mockup
+
     course_frame.attr('src', window.location.origin + "/welcome/courses/" + course_code + "/" + course_type);
 }
 
