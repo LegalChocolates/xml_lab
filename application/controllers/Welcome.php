@@ -237,6 +237,7 @@ class Welcome extends MY_Controller {
 				"room" 		   => $courses[$i]->getRoom(),
 			);
 			array_push($bookings, $booking);
+
 		}
 		$this->data['code'] = $code;
 		$this->data['type'] = $course_type;
