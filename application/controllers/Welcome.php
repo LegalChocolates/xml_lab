@@ -192,4 +192,19 @@ class Welcome extends MY_Controller {
 
 		$this->render();
 	}
+
+	public function courses($course_code, $course_type){
+		//strip %20 from string
+		$code = str_replace("%20", " ", $course_code);
+		$this->data['pagebody'] = 'course';
+		$course = $this->timetable->searchCourse($code, $course_type);
+
+		if($course != null) {
+			$this->data['code'] = $code;
+			$this->data['type'] = $course_type;
+			$this->data['instructor'] = $course->getInstructor();
+			$this->data['room'] = $course->getRoom();
+		}
+		$this->render();
+	}
 }

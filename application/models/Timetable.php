@@ -110,10 +110,10 @@ class Timetable extends CI_Model
 
     function searchPeriod($timeslot, $day){
         $alltimeslots = array_keys($this->periods);
-        for($i = 0; $i < sizeof($alltimeslots); $i++){
-            if(strcmp($alltimeslots[$i],$timeslot) == 0){
-                for($j = 0; $j < sizeof($this->periods[$timeslot]); $j++) {
-                    if(strcmp($this->periods[$timeslot][$j]->getDayofweek(),$day) == 0){
+        for($i = 0; $i < sizeof($alltimeslots); $i++){ //search through all timeslots
+            if(strcmp($alltimeslots[$i],$timeslot) == 0){ //compare if timeslot exists
+                for($j = 0; $j < sizeof($this->periods[$timeslot]); $j++) { // search through all days
+                    if(strcmp($this->periods[$timeslot][$j]->getDayofweek(),$day) == 0){ // check if day exists
                         return $this->periods[$timeslot][$j];
                     }
                 }
@@ -121,6 +121,20 @@ class Timetable extends CI_Model
         }
         return null;
      }
+
+    function searchCourse($course_code, $course_type){
+        $allcourses = array_keys($this->courses);
+        for($i = 0; $i < sizeof($allcourses); $i++){ //search through all course codes
+            if(strcmp($allcourses[$i], $course_code) == 0){ //compare if timeslot exists
+                for($j = 0; $j < sizeof($this->courses[$course_code]); $j++) { // search through all days
+                    if(strcmp($this->courses[$course_code][$j]->getBookingtype(), $course_type) == 0){ // check if day exists
+                        return $this->courses[$course_code][$j];
+                    }
+                }
+            }
+        }
+        return null;
+    }
 
 
 }
