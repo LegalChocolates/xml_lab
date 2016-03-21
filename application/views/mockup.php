@@ -70,13 +70,13 @@
     </aside>
     <div class="row">
         <div class="col-md-4 h">
-            <iframe id="days-frame" src="http://www.w3schools.com"></iframe>
+            <iframe id="days-frame" src="/images/days.png"></iframe>
         </div>
         <div class="col-md-4 h">
-            <iframe id="courses-frame" src="http://www.w3schools.com"></iframe>
+            <iframe id="courses-frame" src="/images/courses1.png"></iframe>
         </div>
         <div class="col-md-4 h">
-            <iframe id="periods-frame" src="http://www.w3schools.com"></iframe>
+            <iframe id="periods-frame" src="/images/periods.jpg"></iframe>
         </div>
     </div>
 </body>
