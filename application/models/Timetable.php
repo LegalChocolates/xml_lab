@@ -78,6 +78,8 @@ class Timetable extends CI_Model
                 $b->setInstructor((string) $booking['instructor']);
                 $b->setRoom((string) $booking['room']);
                 $b->setBookingtype((string) $booking['bookingtype']);
+                $b->setTimeslot((string) $booking['timeslot']);
+                $b->setDayofweek((string) $booking['dayofweek']);
                 array_push($bookings, $b);
             }
             $this->courses[$type] = $bookings;

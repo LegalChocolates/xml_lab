@@ -4,5 +4,7 @@
 <hr>
     {instructor}
     {room}
+    {timeslot}
+    {dayofweek}
 {/booking}
 

@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				{instructor}
 				{room}
 				{bookingtype}
+				{timeslot}
+				{dayofweek}
 				<br>
 			{/booking}
 			<br>
