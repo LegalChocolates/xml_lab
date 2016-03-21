@@ -113,4 +113,10 @@ class Welcome extends MY_Controller {
 		$this->render();
 
 	}
+
+	public function mockup(){
+		$this->load->helper('url');
+		$this->load->view('mockup');
+//		$this->render();
+	}
 }
