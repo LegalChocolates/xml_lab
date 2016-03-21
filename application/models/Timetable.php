@@ -48,32 +48,57 @@ class Timetable extends CI_Model
             $this->days[$type] = $bookings;
         }
 
-        foreach ($this->periods_xml->periods as $period)
+        foreach ($this->periods_xml->period as $period)
         {
             $type = (string) $period['time'];
-
             $bookings = array();
 
-            foreach ($day->booking as $booking)
+            foreach ($period->booking as $booking)
             {
-                $r = new stdClass();
-                $r->instructor   = (string) $booking['instructor'];
-                $r->room         = (string) $booking['room'];
-                $r->bookingtype  = (string) $booking['bookingtype'];
-                $r->dayoftheweek = (string) $booking['dayoftheweek'];
-                $r->coursename   = (string) $booking['coursename'];
+                $b = new Booking();
+                $b->setInstructor((string) $booking['instructor']);
+                $b->setRoom((string) $booking['room']);
+                $b->setBookingtype((string) $booking['bookingtype']);
+                $b->setDayofweek((string) $booking['dayofweek']);
+                $b->setCoursename((string) $booking['coursename']);
 
-                array_push($bookings, $r);
+                array_push($bookings, $b);
             }
-
             $this->periods[$type] = $bookings;
         }
+
+        foreach ($this->courses_xml->course as $course)
+        {
+            $type = (string) $course['code'];
+            $bookings = array();
+
+            foreach ($course->booking as $booking)
+            {
+                $b = new Booking();
+                $b->setInstructor((string) $booking['instructor']);
+                $b->setRoom((string) $booking['room']);
+                $b->setBookingtype((string) $booking['bookingtype']);
+                array_push($bookings, $b);
+            }
+            $this->courses[$type] = $bookings;
+        }
+
+
     }
 
     function days()
     {
         return $this->days;
     }
+    function periods()
+    {
+        return $this->periods;
+    }
+    function courses()
+    {
+        return $this->courses;
+    }
+
 
     function getDay($type)
     {
@@ -82,4 +107,6 @@ class Timetable extends CI_Model
         else
             return null;
     }
+
+
 }
