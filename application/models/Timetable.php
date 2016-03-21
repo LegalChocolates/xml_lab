@@ -137,17 +137,18 @@ class Timetable extends CI_Model
     }
 
     function searchCourse($course_code, $course_type){
+        $foundcourses = array();
         $allcourses = array_keys($this->courses);
         for($i = 0; $i < sizeof($allcourses); $i++){ //search through all course codes
             if(strcmp($allcourses[$i], $course_code) == 0){ //compare if timeslot exists
                 for($j = 0; $j < sizeof($this->courses[$course_code]); $j++) { // search through all days
                     if(strcmp($this->courses[$course_code][$j]->getBookingtype(), $course_type) == 0){ // check if day exists
-                        return $this->courses[$course_code][$j];
+                        array_push($foundcourses, $this->courses[$course_code][$j]);
                     }
                 }
             }
         }
-        return null;
+        return $foundcourses;
     }
 
 
