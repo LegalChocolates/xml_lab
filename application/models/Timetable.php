@@ -108,5 +108,20 @@ class Timetable extends CI_Model
             return null;
     }
 
+    function searchPeriod($timeslot, $day){
+        $alltimeslots = array_keys($this->periods);
+        for($i = 0; $i < sizeof($alltimeslots); $i++){
+            if(strcmp($alltimeslots[$i],$timeslot) == 0){
+                    for($i = 0; $i < sizeof($this->periods[$timeslot]); $i++) {
+                        if(strcmp($this->periods[$timeslot][$i]->getDayofweek(),$day) == 0){
+                            return $this->periods[$timeslot][$i];
+                        }
+                    }
+
+            }
+        }
+        return null;
+     }
+
 
 }
