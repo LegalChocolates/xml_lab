@@ -22,6 +22,9 @@
             height: 100%;
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type = 'text/javascript' src = "<?php echo base_url();?>js/script.js"></script>
 </head>
 <body class="container">
 
