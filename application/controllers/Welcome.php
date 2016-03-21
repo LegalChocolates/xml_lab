@@ -187,9 +187,40 @@ class Welcome extends MY_Controller {
 			$this->data['room']        = $period->getRoom();
 			$this->data['bookingtype'] = $period->getBookingtype();
 			$this->data['coursename']  = $period->getCoursename();
-		} else
-			$this->data['message'] 	   = "NOT FOUND!";
+		} else {
+			$this->data['message'] = "NOT FOUND!";
+			$this->data['timeslot']    = "";
+			$this->data['day']		   = "";
+			$this->data['instructor']  = "";
+			$this->data['room']        = "";
+			$this->data['bookingtype'] = "";
+			$this->data['coursename']  = "";
 
+		}
+		$this->render();
+	}
+
+	public function days($day, $time){
+		$this->data['pagebody'] = 'schedule';
+		$day_booking = $this->timetable->searchDay($day, $time);
+		if($day_booking != null){
+			$this->data['message']     = "FOUND!";
+			$this->data['timeslot']    = $time;
+			$this->data['day']		   = $day;
+			$this->data['instructor']  = $day_booking->getInstructor();
+			$this->data['room']        = $day_booking->getRoom();
+			$this->data['bookingtype'] = $day_booking->getBookingtype();
+			$this->data['coursename']  = $day_booking->getCoursename();
+		} else {
+			$this->data['message'] = "NOT FOUND!";
+			$this->data['timeslot']    = "";
+			$this->data['day']		   = "";
+			$this->data['instructor']  = "";
+			$this->data['room']        = "";
+			$this->data['bookingtype'] = "";
+			$this->data['coursename']  = "";
+
+		}
 		$this->render();
 	}
 }
