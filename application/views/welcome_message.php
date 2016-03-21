@@ -13,10 +13,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to CodeIgniter!</h1>
 
 	<div id="body">
+
 		{days}
 			{day}
-			{course}
+			<br>
+				{booking}
+					{instructor}
+					{room}
+					{bookingtype}
+					{timeslot}
+					{coursename}
+					<br>
+				{/booking}
+		<br>
 		{/days}
+<hr>
+		{periods}
+			{timeslot}
+			<br>
+				{booking}
+					{instructor}
+					{room}
+					{bookingtype}
+					{dayofweek}
+					{coursename}
+					<br>
+				{/booking}
+			<br>
+		{/periods}
+
+<hr>
+		{courses}
+			{code}
+			<br>
+			{booking}
+				{instructor}
+				{room}
+				{bookingtype}
+				<br>
+			{/booking}
+			<br>
+		{/courses}
+
+
+
 	</div>
 
 </div>
