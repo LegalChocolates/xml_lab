@@ -21,6 +21,11 @@
             width: 100%;
             height: 100%;
         }
+        .btn-danger-wrapper {
+            position: absolute;
+            top: 1em;
+            right: 2em;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -30,6 +35,13 @@
 
     <header>
         <h1 class="page-header text-center">My Schedule</h1>
+        <div class="btn-danger-wrapper">
+            <label for="bingo-days">Day</label>
+            {bingo_days}
+            <label for="bingo-time">Time</label>
+            {bingo_times}
+            <button class="btn btn-lg btn-danger">Attempt Bingo!</button>
+        </div>
     </header>
 
     <aside class="row">
