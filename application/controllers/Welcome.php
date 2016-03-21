@@ -226,16 +226,29 @@ class Welcome extends MY_Controller {
 
 	public function courses($course_code, $course_type){
 		//strip %20 from string
+		$bookings = array();
 		$code = str_replace("%20", " ", $course_code);
 		$this->data['pagebody'] = 'course';
-		$course = $this->timetable->searchCourse($code, $course_type);
+		$courses = $this->timetable->searchCourse($code, $course_type); //grab all courses
 
-		if($course != null) {
-			$this->data['code'] = $code;
-			$this->data['type'] = $course_type;
-			$this->data['instructor'] = $course->getInstructor();
-			$this->data['room'] = $course->getRoom();
+		for($i = 0; $i < sizeof($courses); $i++) {
+			$booking = array(
+				"instructor"   => $courses[$i]->getInstructor(),
+				"room" 		   => $courses[$i]->getRoom(),
+			);
+			array_push($bookings, $booking);
 		}
+		$this->data['code'] = $code;
+		$this->data['type'] = $course_type;
+		$this->data['booking'] = $bookings;
+
+
 		$this->render();
+
 	}
+
+
+
+
+
 }

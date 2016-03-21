@@ -1,4 +1,7 @@
 {code}
 {type}
-{instructor}
-{room}
+{booking}
+<hr>
+    {instructor}
+    {room}
+{/booking}
