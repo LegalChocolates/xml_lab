@@ -74,7 +74,9 @@ function setCourses(){
 
 function setPeriods(){
     var url = window.location.origin + window.location.pathname;
+    period_time = $("#periods-time").find(":selected").val();
+    period_day  = $("#periods-day").find(":selected").val();
     //origin   == xml-lab.dev
     //pathname == /Welcome/mockup
-    period_frame.attr('src', url);
+    period_frame.attr('src', window.location.origin + "/welcome/periods/" + period_time + "/" + period_day);
 }
