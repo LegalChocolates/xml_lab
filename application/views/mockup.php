@@ -63,7 +63,7 @@
                 <br>
                 <label for="periods-day">Day</label>
                 {periods_days}
-                <button id="periods-btn" type="button" class="btn btn-success pull-right">Search</button>
+                <button id="periods-btn" onclick="setPeriods()" type="button" class="btn btn-success pull-right">Search</button>
             </nav>
 
         </div>

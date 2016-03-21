@@ -175,4 +175,11 @@ class Welcome extends MY_Controller {
 
 		$this->render();
 	}
+
+	public function periods($timeslot, $day){
+		$this->data['pagebody'] = 'schedule';
+		$this->data['timeslot'] = $timeslot;
+		$this->data['day'] = $day;
+		$this->render();
+	}
 }
