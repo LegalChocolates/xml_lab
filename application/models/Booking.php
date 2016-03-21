@@ -3,12 +3,12 @@
 class Booking extends CI_Model
 {
 
-    protected $timeslot;
-    protected $dayofweek;
-    protected $coursename;
-    protected $instructor;
-    protected $room;
-    protected $bookingtype;
+    protected $timeslot = null;
+    protected $dayofweek = null;
+    protected $coursename = null;
+    protected $instructor = null;
+    protected $room = null;
+    protected $bookingtype = null;
 
     /**
      * Booking constructor.
