@@ -41,7 +41,7 @@
                 <br>
                 <label for="days-time">Time</label>
                 {days_times}
-                <button type="button" class="btn btn-success pull-right">Search</button>
+                <button id="days-btn" type="button" class="btn btn-success pull-right">Search</button>
             </nav>
         </div>
         <div class="col-md-4 text-center">
@@ -52,7 +52,7 @@
                 <br>
                 <label for="courses-type">Type</label>
                 {courses_types}
-                <button type="button" class="btn btn-success pull-right">Search</button>
+                <button id="courses-btn" type="button" class="btn btn-success pull-right">Search</button>
             </nav>
         </div>
         <div class="col-md-4 text-center">
@@ -63,7 +63,7 @@
                 <br>
                 <label for="periods-day">Day</label>
                 {periods_days}
-                <button type="button" class="btn btn-success pull-right">Search</button>
+                <button id="periods-btn" type="button" class="btn btn-success pull-right">Search</button>
             </nav>
 
         </div>
