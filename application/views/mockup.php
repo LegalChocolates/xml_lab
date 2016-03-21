@@ -33,12 +33,8 @@
             left: 2em;
         }
 
-        .result-green {
-            color: darkseagreen;
-        }
-
-        .result-red {
-            color: firebrick;
+        .btn-danger:hover {
+            background: dodgerblue !important;
         }
     </style>
 
@@ -54,7 +50,7 @@
             {bingo_days}
             <label for="bingo-time">Time</label>
             {bingo_times}
-            <button class="btn btn-lg btn-danger">Attempt Bingo!</button>
+            <button class="btn btn-lg btn-danger" style="background: #68daff">Attempt Bingo!</button>
         </div>
         <div class="left-text">
             <button id="viewall" class="btn btn-lg btn-default">View All</button>
