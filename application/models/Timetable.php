@@ -120,7 +120,21 @@ class Timetable extends CI_Model
             }
         }
         return null;
-     }
+    }
+
+    function searchDay($day, $time){
+        $alltimeslots = array_keys($this->days);
+        for($i = 0; $i < sizeof($alltimeslots); $i++){
+            if(strcmp($alltimeslots[$i],$day) == 0){
+                for($j = 0; $j < sizeof($this->days[$day]); $j++) {
+                    if(strcmp($this->days[$day][$j]->getTimeslot(),$time) == 0){
+                        return $this->days[$day][$j];
+                    }
+                }
+            }
+        }
+        return null;
+    }
 
 
 }
