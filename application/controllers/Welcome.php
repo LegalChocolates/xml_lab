@@ -90,7 +90,10 @@ class Welcome extends MY_Controller {
 				$booking = array(
 					"instructor"   => $courses[$key][$i]->getInstructor(),
 					"room" 		   => $courses[$key][$i]->getRoom(),
-					"bookingtype"  => $courses[$key][$i]->getBookingtype()
+					"bookingtype"  => $courses[$key][$i]->getBookingtype(),
+					"timeslot"    => $courses[$key][$i]->getTimeslot(),
+					"dayofweek"    => $courses[$key][$i]->getDayofweek()
+
 				);
 				array_push($bookings, $booking);
 			}
@@ -232,9 +235,12 @@ class Welcome extends MY_Controller {
 		$courses = $this->timetable->searchCourse($code, $course_type); //grab all courses
 
 		for($i = 0; $i < sizeof($courses); $i++) {
+
 			$booking = array(
 				"instructor"   => $courses[$i]->getInstructor(),
 				"room" 		   => $courses[$i]->getRoom(),
+				"timeslot"	   => $courses[$i]->getTimeslot(),
+				"dayofweek"    => $courses[$i]->getDayofweek()
 			);
 			array_push($bookings, $booking);
 
