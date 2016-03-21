@@ -163,7 +163,7 @@ class Welcome extends MY_Controller {
 		$this->data['pagebody'] = 'mockup';
 
 		//name data selected additional
-		
+
 		$this->data['days_days']  = form_dropdown('ddays', $day_enum, 'mon', $days_day_id);
 		$this->data['days_times'] = form_dropdown('dtimes', $time_enum, '830', $days_time_id);
 

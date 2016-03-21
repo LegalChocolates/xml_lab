@@ -1,5 +1,9 @@
 $(document).ready( function(){
 
+    day_frame    = $("#days-frame");
+    course_frame = $("#courses-frame");
+    period_frame = $("#periods-frame");
+
     load_days();
     load_courses();
     load_periods();
@@ -15,31 +19,62 @@ $(document).ready( function(){
     $("#periods-time, #periods-day").on('change', function(){
         load_periods();
     });
+
+    $("#days-btn").click(function(){
+        setDays();
+    });
+
+    $("#courses-btn").click(function(){
+        setCourses();
+    });
+
+    $("#periods-btn").click(function(){
+        setPeriods();
+    });
 });
 
+var day_day,day_time,period_day,period_time,course_code,course_type;
+
+var day_frame, course_frame, period_frame;
+
 function load_days(){
-    var day  = $("#days-day").find(":selected").val();
-    var time = $("#days-time").find(":selected").val();
+    day_day  = $("#days-day").find(":selected").val();
+    day_time = $("#days-time").find(":selected").val();
 
-    var frame  = $("#days-frame");
-
-    console.log("(days) " + day + " " + time);
+    console.log("(days) " + day_day + " " + day_time);
 }
 
 function load_courses(){
-    var code = $("#courses-code").find(":selected").val();
-    var type = $("#courses-type").find(":selected").val();
+    course_code = $("#courses-code").find(":selected").val();
+    course_type = $("#courses-type").find(":selected").val();
 
-    var frame  = $("#courses-frame");
-
-    console.log("(courses) " + code + " " + type);
+    console.log("(courses) " + course_code + " " + course_type);
 }
 
 function load_periods(){
-    var time = $("#periods-time").find(":selected").val();
-    var day  = $("#periods-day").find(":selected").val();
+    period_time = $("#periods-time").find(":selected").val();
+    period_day  = $("#periods-day").find(":selected").val();
 
-    var frame  = $("#periods-frame");
+    console.log("(periods) " + period_time + " " + period_day);
+}
 
-    console.log("(periods) " + time + " " + day);
+function setDays(){
+    var url = window.location.origin + window.location.pathname;
+    //origin   == xml-lab.dev
+    //pathname == /Welcome/mockup
+    day_frame.attr('src', url);
+}
+
+function setCourses(){
+    var url = window.location.origin + window.location.pathname;
+    //origin   == xml-lab.dev
+    //pathname == /Welcome/mockup
+    course_frame.attr('src', url);
+}
+
+function setPeriods(){
+    var url = window.location.origin + window.location.pathname;
+    //origin   == xml-lab.dev
+    //pathname == /Welcome/mockup
+    period_frame.attr('src', url);
 }
